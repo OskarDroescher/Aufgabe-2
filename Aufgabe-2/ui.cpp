@@ -21,14 +21,16 @@ void Ui::anwendung() {
 
     // Aufgabe 2
     // Objekte erstellen unter Nutzung aller möglichen Parametervarianten
-    // Complex z0();
-    // Complex z1(12);
-    // Complex z2(12, 23);
-    // Complex z3(12, 23, 34);
-    // Complex z4(12, 23, 34, 13);
-    // Complex z5(12, 23, 34, 13, 23);
-    // std::cout << z5.toStringKar() << endl;
-    // std::cout << z5.toStringPol() << endl;
+     //Complex z0;
+     //std::cout << z0.toStringKar() << endl;
+     //std::cout << z0.toStringPol() << endl;
+     //Complex z1(12);
+     //Complex z2(12, 23);
+     //Complex z3(12, 23, 34);
+     //Complex z4(12, 23, 34, 13);
+     //Complex z5(12, 23, 34, 13, 23);
+     //std::cout << z5.toStringKar() << endl;
+     //std::cout << z5.toStringPol() << endl;
     
 
 // User-Eingabe

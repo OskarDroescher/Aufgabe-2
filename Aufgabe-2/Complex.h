@@ -15,25 +15,23 @@ public:
 	*/
 
 	// Aufgabe 1a)
-	/*
-	* Standardkonstruktor
-	Complex() {
-		m_x = 1.0;
-		m_y = 1.0;
-		m_radius = 1.0;
-		m_phi = 1.0;
-		m_r = m_radius;
-	}
-	Complex(double x, double y) {
-		m_x = x;
-		m_y = y;
-	}
-	Complex(double x, double y, double m_radius) {
-		m_radius = x;
-		m_phi = y;
-		m_r = m_radius;
-	}
-	*/
+	// Standardkonstruktor
+	//Complex() {
+	//	m_x = 1.0;
+	//	m_y = 1.0;
+	//	m_radius = 1.0;
+	//	m_phi = 1.0;
+	//	m_r = m_radius;
+	//}
+	//Complex(double x, double y) {
+	//	m_x = x;
+	//	m_y = y;
+	//}
+	//Complex(double x, double y, double m_radius) {
+	//	m_radius = x;
+	//	m_phi = y;
+	//	m_r = m_radius;
+	//}
 	
 
 	// Aufgabe 1b)
@@ -48,13 +46,14 @@ public:
 	// Falls zusätzlich der Default-Konstruktor (s.o.) implementiert ist gibt der Compiler die Fehlermeldung:
 	// Fehler C2280: "Ui::Ui(void)" : Es wurde versucht, auf eine gelöschte Funktion zu verweisen
 	//Konstruktor mit Default-Parametern
-	//Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) {
-	//	m_x = x;
-	//	m_y = y;
-	//	m_radius = radius;
-	//	m_phi = phi;
-	//	m_r = m_radius;
-	//}
+	Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) {
+		m_x = x;
+		m_y = y;
+		m_radius = radius;
+		m_phi = phi;
+		m_r = m_radius;
+	}
+
 
 	// Aufgabe 3
 	//Complex(double x, double y) : m_x(x), m_y(y), m_radius(x), m_phi(y), m_r(m_radius) {
