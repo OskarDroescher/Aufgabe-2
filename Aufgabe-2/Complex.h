@@ -8,11 +8,10 @@ public:
 	// Konstruktoren
 	// Default-Konstruktor, der keine Parameter erwartet (wird vom Compiler erstellt
 	// falls kein Konstruktor explizit angegeben wird)
-	/*
-	Complex() {
+	//Complex() {
 
-	}
-	*/
+	//}
+	
 
 	// Aufgabe 1a)
 	// Standardkonstruktor
@@ -33,7 +32,6 @@ public:
 	//	m_r = m_radius;
 	//}
 	
-
 	// Aufgabe 1b)
 	/*
 	Fehlermeldung beim Versuch eine Instanz der Complex Klasse ohne Parameter zu erstellen :
@@ -45,24 +43,26 @@ public:
 	// Aufgabe 2)
 	// Falls zusätzlich der Default-Konstruktor (s.o.) implementiert ist gibt der Compiler die Fehlermeldung:
 	// Fehler C2280: "Ui::Ui(void)" : Es wurde versucht, auf eine gelöschte Funktion zu verweisen
-	//Konstruktor mit Default-Parametern
-	Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) {
+	//Konstruktor mit Default-Parametern:
+	// Weist, wenn keine Werte angegeben sind beim erstellen eines Objektes in der ui.cpp den Attributen
+	// den Wert 1.0 zu
+	//Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) {
+	//	m_x = x;
+	//	m_y = y;
+	//	m_radius = radius;
+	//	m_phi = phi;
+	//	m_r = m_radius;
+	//}
+
+
+	// Aufgabe 3
+	Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) : m_x(x), m_y(y), m_radius(radius), m_phi(phi), m_r(m_radius) {
 		m_x = x;
 		m_y = y;
 		m_radius = radius;
 		m_phi = phi;
 		m_r = m_radius;
 	}
-
-
-	// Aufgabe 3
-	//Complex(double x, double y) : m_x(x), m_y(y), m_radius(x), m_phi(y), m_r(m_radius) {
-	//	m_x = x;
-	//	m_y = y;
-	//	m_radius = x;
-	//	m_phi = y;
-	//	m_r = m_radius;
-	//}
 
 
 	// Koordinaten setzen Funktionen
@@ -77,9 +77,9 @@ public:
 	double getBetrag() { return m_r; }
 
 	// Ausgabefunktionen
-	std::string toStringKar() const;
-	std::string toStringPol() const;
-	std::string toStringKarPol() const;
+	std::string toStringKar() const;	// Aufgabe 4: const Memberfunktion
+	std::string toStringPol() const;	// Aufgabe 4: const Memberfunktion
+	std::string toStringKarPol() const;	// Aufgabe 4: const Memberfunktion
 
 private:
 	// Variablen deklarieren
