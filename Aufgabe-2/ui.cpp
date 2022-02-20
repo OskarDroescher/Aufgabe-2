@@ -8,22 +8,17 @@ using namespace std;
 void Ui::anwendung() {
 
     // Variablen
-    /*
+    
     double x;
     double y;
     double r;
     double phi;
-    */
+    
     string eingabeFormat = "0";
     string update = "0";
     string ausgabeFormat = "0";
     string neueBerechnung = "n";
-    //Complex z1 = Complex(3, 2.3);
-    z.setCoordsKar(12, 24);
-    std::cout << z.toStringPol() << "\n";
-    z1.setCoordsPol(34, 65);
-    std::cout << z1.toStringKar();
-/*
+
 // User-Eingabe
 
     //Neue Berechnung
@@ -32,112 +27,113 @@ void Ui::anwendung() {
         // Eingabeformat wählen
         do
         {
-            cout << "Fuer das Eingabeformat Kartesisch '1', fuer Polar '2' eingeben: ";
-            cin >> eingabeFormat;
+            std::cout << "Fuer das Eingabeformat Kartesisch '1', fuer Polar '2' eingeben: ";
+            std::cin >> eingabeFormat;
         } while (eingabeFormat != "1" && eingabeFormat != "2");
-        cout << endl;
+        std::cout << endl;
     
         // Kartesische Eingabe
         if (eingabeFormat == "1")
         {
-            cout << "Realteil (X-Koordinate) eingeben: ";
-            cin >> x;
-            cout << "Imaginaerteil (Y-Koordinate) eingeben: ";
-            cin >> y;
+            std::cout << "Realteil (X-Koordinate) eingeben: ";
+            std::cin >> x;
+            std::cout << "Imaginaerteil (Y-Koordinate) eingeben: ";
+            std::cin >> y;
             z.setCoordsKar(x, y);
-            cout << endl;
+            std::cout << endl;
 
             // Werte updaten
             do
             {
-                cout << "Moechten Sie den Realteil (X-Wert) anpassen? -> '1', ansonsten '2':";
-                cin >> update;
+                std::cout << "Moechten Sie den Realteil (X-Wert) anpassen? -> '1', ansonsten '2':";
+                std::cin >> update;
             } while (update != "1" && update != "2");
             if (update == "1")
             {
-                cout << "Neuen Realteil (X-Koordinate) eingeben: ";
-                cin >> x;
+                std::cout << "Neuen Realteil (X-Koordinate) eingeben: ";
+                std::cin >> x;
                 z.setXCoord(x);
             }
             do
             {
-                cout << "Moechten Sie den Imaginaerteil (Y-Wert) anpassen? -> '1', ansonsten '2':";
-                cin >> update;
+                std::cout << "Moechten Sie den Imaginaerteil (Y-Wert) anpassen? -> '1', ansonsten '2':";
+                std::cin >> update;
             } while (update != "1" && update != "2");
             if (update == "1")
             {
-                cout << "Neuen Imaginaerteil (Y-Koordinate) eingeben: ";
-                cin >> y;
+                std::cout << "Neuen Imaginaerteil (Y-Koordinate) eingeben: ";
+                std::cin >> y;
                 z.setYCoord(y);
             }
-            cout << endl;
+            std::cout << endl;
         }
         // Polar Eingabe
         else if (eingabeFormat == "2")
         {
-            cout << "Betrag (r) eingeben: ";
-            cin >> r;
-            cout << "Winkel in Grad eingeben: ";
-            cin >> phi;
+            std::cout << "Betrag (r) eingeben: ";
+            std::cin >> r;
+            std::cout << "Winkel in Grad eingeben: ";
+            std::cin >> phi;
             z.setCoordsPol(r, phi);
-            cout << endl;
+            std::cout << endl;
 
             // Werte updaten
             do
             {
-                cout << "Moechten Sie den Betrag (r) anpassen? -> '1', ansonsten '2':";
-                cin >> update;
+                std::cout << "Moechten Sie den Betrag (r) anpassen? -> '1', ansonsten '2':";
+                std::cin >> update;
             } while (update != "1" && update != "2");
             if (update == "1")
             {
-                cout << "Neuen Betrag (r) eingeben: ";
-                cin >> r;
+                std::cout << "Neuen Betrag (r) eingeben: ";
+                std::cin >> r;
                 z.setRCoord(r);
             }
             do
             {
-                cout << "Moechten Sie den Winkel anpassen? -> '1', ansonsten '2':";
-                cin >> update;
+                std::cout << "Moechten Sie den Winkel anpassen? -> '1', ansonsten '2':";
+                std::cin >> update;
             } while (update != "1" && update != "2");
             if (update == "1")
             {
-                cout << "Neuen Winkel in Grad eingeben: ";
-                cin >> phi;
+                std::cout << "Neuen Winkel in Grad eingeben: ";
+                std::cin >> phi;
                 z.setPhiCoord(phi);
             }
-            cout << endl;
+            std::cout << endl;
         }
 
         // Ausgabeformat wählen
         do
         {
-            cout << "Wie sollen die Werte ausgegeben werden?" << "\n"
+            std::cout << "Wie sollen die Werte ausgegeben werden?" << "\n"
                  <<"Fuer Kartesische Darstellung '1' eingeben" << "\n"
                  << "Fuer Polar Darstellung '2' eingeben" << "\n"
                  << "Fuer Kartesische und Polar Darstellung '3' eingeben: ";
-            cin >> ausgabeFormat;
+            std::cin >> ausgabeFormat;
         } while (ausgabeFormat != "1" && ausgabeFormat != "2" && ausgabeFormat != "3");
-        cout << endl;
+        std::cout << endl;
 
         if (ausgabeFormat == "1")
         {
-            cout << z.toStringKar() << endl;
+            std::cout << z.toStringKar() << endl;
         }
         else if (ausgabeFormat == "2")
         {
-            cout << z.toStringPol() << endl;
+            std::cout << z.toStringPol() << endl;
         }
         else if (ausgabeFormat == "3")
         {
-            cout << z.toStringKarPol() << endl;
+            std::cout << z.toStringKarPol() << endl;
         }
-        cout << endl;
-        cout << "Fuer eine neue Berechnung 'j' eingeben: ";
-        cin >> neueBerechnung;
-        cout << endl;
+        std::cout << endl;
+        std::cout << "Fuer eine neue Berechnung 'j' eingeben: ";
+        std::cin >> neueBerechnung;
+        std::cout << endl;
     } while (neueBerechnung == "j");
 
-    */
+
+/* ----------------------------------------------------------------------------- */
 
 
 /*
