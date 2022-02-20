@@ -14,6 +14,24 @@ public:
 	}
 	*/
 
+	// Aufgabe 1a)
+	/*
+	Complex(double x, double y) {
+		m_x = x;
+		m_y = y;
+		m_radius = x;
+		m_phi = y;
+		m_r = m_radius;
+	}
+	*/
+
+	// Aufgabe 1b)
+	/*
+	Fehlermeldung beim Versuch eine Instanz der Complex Klasse ohne Parameter zu erstellen :
+	Fehler C2280: "Ui::Ui(void)" : Es wurde versucht, auf eine gelöschte Funktion zu verweisen
+	*/
+
+
 	// Aufgabe 2)
 	// Falls zusätzlich der Default-Konstruktor (s.o.) implementiert ist gibt der Compiler die Fehlermeldung:
 	// Fehler C2535: "Complex::Complex(void)": Memberfunktion bereits definiert oder deklariert

@@ -8,5 +8,4 @@ public:
 
 private:
 	Complex z;
-	Complex z1;
 };
