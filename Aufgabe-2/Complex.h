@@ -14,7 +14,10 @@ public:
 	}
 	*/
 
-	// Aufgabe 1a)
+	// Aufgabe 2)
+	// Falls zusätzlich der Default-Konstruktor (s.o.) implementiert ist gibt der Compiler die Fehlermeldung:
+	// Fehler C2535: "Complex::Complex(void)": Memberfunktion bereits definiert oder deklariert
+
 	Complex(){
 		m_x = 1.0;
 		m_y = 1.0;
