@@ -62,19 +62,19 @@ void Complex::updateBetrag() {
 
 
 // Ausgabefunktionen
-std::string Complex::toStringKar() {
+std::string Complex::toStringKar() const {
     std::stringstream ausgabe;
     ausgabe << "Kartesisch: z = " << m_x << " + i" << m_y;
     return ausgabe.str();
 }
 
-std::string Complex::toStringPol() {
+std::string Complex::toStringPol() const {
     std::stringstream ausgabe;
     ausgabe << "Polar: z = " << m_radius << "(cos " << m_phi << " + i sin " << m_phi << ")";
     return ausgabe.str();
 }
 
-std::string Complex::toStringKarPol() {
+std::string Complex::toStringKarPol() const {
     std::stringstream ausgabe;
     ausgabe << "Kartesisch: z = " << m_x << " + i" << m_y << "\n"
         "Polar: z = " << m_radius << "(cos " << m_phi << " + i sin " << m_phi << ")";

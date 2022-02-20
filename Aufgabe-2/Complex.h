@@ -40,7 +40,7 @@ public:
 	//Konstruktor mit Default-Parametern
 	Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) { }
 
-	Complex(double x, double y) {
+	Complex(double x, double y) : m_x(x), m_y(y), m_radius(x), m_phi(y), m_r(m_radius) {
 		m_x = x;
 		m_y = y;
 		m_radius = x;
@@ -61,9 +61,9 @@ public:
 	double getBetrag() { return m_r; }
 
 	// Ausgabefunktionen
-	std::string toStringKar();
-	std::string toStringPol();
-	std::string toStringKarPol();
+	std::string toStringKar() const;
+	std::string toStringPol() const;
+	std::string toStringKarPol() const;
 
 private:
 	// Variablen deklarieren
