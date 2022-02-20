@@ -35,17 +35,25 @@ public:
 	// Aufgabe 2)
 	// Falls zusätzlich der Default-Konstruktor (s.o.) implementiert ist gibt der Compiler die Fehlermeldung:
 	// Fehler C2280: "Ui::Ui(void)" : Es wurde versucht, auf eine gelöschte Funktion zu verweisen
-
-	
 	//Konstruktor mit Default-Parametern
-	Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) { }
-
-	Complex(double x, double y) {
+	/*
+	Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) {
 		m_x = x;
 		m_y = y;
-		m_radius = x;
-		m_phi = y;
-		m_r = m_radius;
+		m_radius = radius;
+		m_phi = phi;
+		m_r = r;
+	}
+	*/
+	
+
+	// Aufgabe 3
+	Complex(double x, double y, double radius, double phi, double r): m_x(x), m_y(y), m_radius(radius), m_phi(phi), m_r(m_radius) {
+		//m_x = x;
+		//m_y = y;
+		//m_radius = radius;
+		//m_phi = phi;
+		//m_r = r;
 	}
 
 
