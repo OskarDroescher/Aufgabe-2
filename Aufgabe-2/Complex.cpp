@@ -1,0 +1,82 @@
+#define _USE_MATH_DEFINES
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <cmath>
+#include "Complex.h"
+
+
+// Koordinaten setzen Funktionen
+void Complex::setXCoord(double a) {
+    m_x = a;
+    updateBetrag();
+    updateCoordsPol();
+}
+
+void Complex::setYCoord(double a) {
+    m_y = a;
+    updateBetrag();
+    updateCoordsPol();
+}
+
+void Complex::setCoordsKar(double x, double y) {
+    m_x = x;
+    m_y = y;
+    updateBetrag();
+    updateCoordsPol();
+}
+
+void Complex::setCoordsPol(double x, double y) {
+    m_radius = x;
+    m_phi = y;
+    m_r = m_radius;
+    updateCoordsKar();
+}
+
+void Complex::setRCoord(double a) {
+    m_radius = a;
+    m_r = m_radius;
+    updateCoordsKar();
+}
+
+void Complex::setPhiCoord(double a) {
+    m_phi = a;
+    updateCoordsKar();
+}
+
+
+//Private Helperfunktionen -> Werte updaten
+void Complex::updateCoordsKar() {
+    m_x = m_radius * cos(m_phi * M_PI / 180);
+    m_y = m_radius * sin(m_phi * M_PI / 180);
+}
+
+void Complex::updateCoordsPol() {
+    m_radius = m_r;
+    m_phi = atan2(m_y, m_x) * 180 / M_PI;
+}
+
+void Complex::updateBetrag() {
+    m_r = sqrt(m_x * m_x + m_y * m_y);
+}
+
+
+// Ausgabefunktionen
+std::string Complex::toStringKar() {
+    std::stringstream ausgabe;
+    ausgabe << "Kartesisch: z = " << m_x << " + i" << m_y;
+    return ausgabe.str();
+}
+
+std::string Complex::toStringPol() {
+    std::stringstream ausgabe;
+    ausgabe << "Polar: z = " << m_radius << "(cos " << m_phi << " + i sin " << m_phi << ")";
+    return ausgabe.str();
+}
+
+std::string Complex::toStringKarPol() {
+    std::stringstream ausgabe;
+    ausgabe << "Kartesisch: z = " << m_x << " + i" << m_y << "\n"
+        "Polar: z = " << m_radius << "(cos " << m_phi << " + i sin " << m_phi << ")";
+    return ausgabe.str();
+}
