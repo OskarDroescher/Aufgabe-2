@@ -5,6 +5,7 @@
 #include <cmath>
 #include "Complex.h"
 
+int Complex::CountComplex = 0;
 
 // Koordinaten setzen Funktionen
 void Complex::setXCoord(double a) {

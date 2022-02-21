@@ -121,7 +121,7 @@ void Ui::anwendung() {
         do
         {
             std::cout << "Wie sollen die Werte ausgegeben werden?" << "\n"
-                 <<"Fuer Kartesische Darstellung '1' eingeben" << "\n"
+                 << "Fuer Kartesische Darstellung '1' eingeben" << "\n"
                  << "Fuer Polar Darstellung '2' eingeben" << "\n"
                  << "Fuer Kartesische und Polar Darstellung '3' eingeben: ";
             std::cin >> ausgabeFormat;
@@ -141,11 +141,15 @@ void Ui::anwendung() {
             std::cout << z.toStringKarPol() << endl;
         }
         std::cout << endl;
+        std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
         std::cout << "Fuer eine neue Berechnung 'j' eingeben: ";
         std::cin >> neueBerechnung;
         std::cout << endl;
+        if (neueBerechnung != "j") {
+            z.~Complex();
+            std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist:  " + to_string(z.CountComplex) << endl;
+        }
     } while (neueBerechnung == "j");
-
 
 /* ----------------------------------------------------------------------------- */
 

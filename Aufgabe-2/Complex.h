@@ -55,6 +55,9 @@ public:
 	//}
 
 
+	static int CountComplex;
+
+
 	// Aufgabe 3
 	Complex(double x = 1.0, double y = 1.0, double radius = 1.0, double phi = 1.0, double r = 1.0) : m_x(x), m_y(y), m_radius(radius), m_phi(phi), m_r(m_radius) {
 		m_x = x;
@@ -62,8 +65,13 @@ public:
 		m_radius = radius;
 		m_phi = phi;
 		m_r = m_radius;
+		CountComplex++;
 	}
 
+
+	~Complex() {
+		CountComplex--;
+	};
 
 	// Koordinaten setzen Funktionen
 	void setCoordsKar(double a, double b);
