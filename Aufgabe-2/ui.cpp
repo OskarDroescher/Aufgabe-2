@@ -28,7 +28,7 @@ void Ui::anwendung() {
      //Complex z2(12, 23);
      //Complex z3(12, 23, 34);
      
-     // Aufgabe 5a) statisch:
+     // Aufgabe 5:
     /*
     std::cout << "Aufgabe 5: " << endl;
     Complex z4(1.0, -2.0);
