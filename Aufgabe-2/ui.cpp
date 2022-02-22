@@ -29,6 +29,8 @@ void Ui::anwendung() {
      //Complex z3(12, 23, 34);
      
      // Aufgabe 5a) statisch:
+    /*
+    std::cout << "Aufgabe 5: " << endl;
     Complex z4(1.0, -2.0);
     Complex z5(1.0, 2.0);
     std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;    // CountComplex = 3 (z, z4, z5)
@@ -48,8 +50,9 @@ void Ui::anwendung() {
      std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
      z.~Complex();   // CountComplex = 0
      std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
+     */
     
-/*
+
 // User-Eingabe
 
     //Neue Berechnung
@@ -168,7 +171,7 @@ void Ui::anwendung() {
         }
     } while (neueBerechnung == "j");
 
-    */
+    
 
 /* ----------------------------------------------------------------------------- */
 
