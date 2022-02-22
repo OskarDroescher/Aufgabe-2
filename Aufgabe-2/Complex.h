@@ -54,7 +54,7 @@ public:
 	//	m_r = m_radius;
 	//}
 
-
+	// Aufgabe 5: Statische Variable zum hoch/-runterzählen der Instanzen
 	static int CountComplex;
 
 
