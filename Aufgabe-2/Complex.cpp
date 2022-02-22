@@ -45,13 +45,13 @@ void Complex::setPhiCoord(double a) {
     updateCoordsKar();
 }
 
-//Muiltiplikationsoperator als Memberfunktion
-Complex Complex::operator*=(Complex c) {
+// Muiltiplikationsoperator als Memberfunktion
+Complex Complex::operator*(Complex c) {
     double x = m_x * c.getReal() - m_y * c.getImag();   // [z9(x)*z10(x) + z9(y)*z10(y)]
     double y = m_y * c.getReal() + c.getImag() * m_x;   // [z9(y)*z10(x) + z10(y)*z9(x)]
     m_x = x;
     m_y = y;
-    return *this;       // this pointer zeigt auf das Objekt selbst
+    return *this;                                       // this pointer zeigt auf das Objekt selbst
 }
 
 

@@ -8,12 +8,10 @@ using namespace std;
 void Ui::anwendung() {
 
     // Variablen
-    
     double x;
     double y;
     double r;
     double phi;
-    
     string eingabeFormat = "0";
     string update = "0";
     string ausgabeFormat = "0";
@@ -29,8 +27,9 @@ void Ui::anwendung() {
     // Complex z3(12, 23, 34);                    // 3 Parameter
     // Complex z23(12, 23, 34, 32);               // 4 Parameter
     // Complex z23(12, 23, 34, 32, 12.4);         // 5 Parameter
-     
-     // Aufgabe 5:
+    
+
+    // Aufgabe 5:
     /*
     std::cout << "Aufgabe 5: " << endl;
     Complex z4(1.0, -2.0);
@@ -64,9 +63,9 @@ void Ui::anwendung() {
     // z11 =          [5.2*4.1 - 3.5*1.8]  + i *          [3.5*4.1 + 1.8*5.2]
     // z11 =             [15.02]           + i *              [23.71]
     // z11 = 15.02 + i23.71
-    Complex z9(5.2, 3.5);       // z9(x) = m_x = 5.2 ; z9(y) = m_y = 3.5
-    Complex z10(4.1, 1.8);      // z10(x) = c.getReal = 4.1 ; z10(y) = c.getImag = 1.8
-    Complex z11 = z9*=z10;
+    Complex z9(5.2, 3.5);                       // z9(x) = m_x = 5.2 ; z9(y) = m_y = 3.5
+    Complex z10(4.1, 1.8);                      // z10(x) = c.getReal = 4.1 ; z10(y) = c.getImag = 1.8
+    Complex z11 = z9*z10;
     std::cout << z11.toStringMult() << endl;
     
 

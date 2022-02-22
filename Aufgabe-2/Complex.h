@@ -87,7 +87,7 @@ public:
 	double getImag() const { return m_y; }
 
 	// Multiplikations-Operator für komplexe Zahlen
-	Complex operator*=(Complex c);		// Zwei Vektoren multiplizieren
+	Complex operator*(Complex c);		// Zwei Vektoren multiplizieren
 
 
 	// Ausgabefunktionen
@@ -98,8 +98,8 @@ public:
 
 private:
 	// Variablen deklarieren
-	double m_x;					// re
-	double m_y;					// im
+	double m_x;
+	double m_y;
 	double m_radius;
 	double m_phi;
 	double m_r;
