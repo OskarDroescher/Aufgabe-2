@@ -68,7 +68,7 @@ public:
 		CountComplex++;
 	}
 
-
+	// Destruktor
 	~Complex() {
 		CountComplex--;
 	};

@@ -21,25 +21,28 @@ void Ui::anwendung() {
 
     // Aufgabe 2
     // Objekte erstellen unter Nutzung aller möglichen Parametervarianten
-     //Complex z0;
-     //std::cout << z0.toStringKar() << endl;
-     //std::cout << z0.toStringPol() << endl;
-     //Complex z1(12);
-     //Complex z2(12, 23);
-     //Complex z3(12, 23, 34);
+    // Complex z0;                                // Keine Parameter
+    // std::cout << z0.toStringKar() << endl;     // Werte aus Standardkonstruktor werden genommen
+    // std::cout << z0.toStringPol() << endl;     // Werte aus Standardkonstruktor werden genommen
+    // Complex z1(12);                            // 1 Parameter
+    // Complex z2(12, 23);                        // 2 Parameter
+    // Complex z3(12, 23, 34);                    // 3 Parameter
+    // Complex z23(12, 23, 34, 32);               // 4 Parameter
+    // Complex z23(12, 23, 34, 32, 12.4);         // 5 Parameter
      
      // Aufgabe 5:
     /*
     std::cout << "Aufgabe 5: " << endl;
     Complex z4(1.0, -2.0);
     Complex z5(1.0, 2.0);
-    std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;    // CountComplex = 3 (z, z4, z5)
-    z.~Complex();   // CountComplex = 2
+    std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;        // CountComplex = 3 (z, z4, z5)
+    z.~Complex();       // CountComplex = 2
     std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
 
      Complex z6(1.0, -2.0);
      Complex z7(z6);
      std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;   // CountComplex = 3, obwohl zwei neue komplexe Zahlen Instanzen (z6, z7) dazu gekommen sind.
+     
      // Aufgabe 5b)
      // Instanzen werden somit nicht korrekt gezählt. Hier müsste man einen Kopierkonstruktor definieren,
      // Aufgabe war es jedoch nur, zu bestimmen, ob die Instanzen korrekt hochgezählt werden (=> Nein!).
