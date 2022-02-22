@@ -27,12 +27,27 @@ void Ui::anwendung() {
      //Complex z1(12);
      //Complex z2(12, 23);
      //Complex z3(12, 23, 34);
-     //Complex z4(12, 23, 34, 13);
-     //Complex z5(12, 23, 34, 13, 23);
-     //std::cout << z5.toStringKar() << endl;
-     //std::cout << z5.toStringPol() << endl;
-    
+     
+     // Aufgabe 5a) statisch:
+    Complex z4(1.0, -2.0);
+    Complex z5(1.0, 2.0);
+    std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;    // CountComplex = 3 (z, z4, z5)
+    z.~Complex();   // CountComplex = 2
+    std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
 
+     Complex z6(1.0, -2.0);
+     Complex z7(z6);
+     std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;   // CountComplex = 3, obwohl zwei neue komplexe Zahlen (z6, z7) dazu gekommen sind.
+     // Instanzen werden somit nicht korrekt gezählt
+
+     z.~Complex();   // CountComplex = 2
+     std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
+     z.~Complex();   // CountComplex = 1
+     std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
+     z.~Complex();   // CountComplex = 0
+     std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
+    
+/*
 // User-Eingabe
 
     //Neue Berechnung
@@ -150,6 +165,8 @@ void Ui::anwendung() {
             std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist:  " + to_string(z.CountComplex) << endl;
         }
     } while (neueBerechnung == "j");
+
+    */
 
 /* ----------------------------------------------------------------------------- */
 
