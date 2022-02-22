@@ -82,17 +82,24 @@ public:
 	void setPhiCoord(double a);
 	void setRCoord(double a);
 
-	double getBetrag() { return m_r; }
+	double getBetrag() const { return m_r; }
+	double getReal() const { return m_x; }
+	double getImag() const { return m_y; }
+
+	// Multiplikations-Operator für komplexe Zahlen
+	Complex operator*=(Complex c);		// Zwei Vektoren multiplizieren
+
 
 	// Ausgabefunktionen
 	std::string toStringKar() const;	// Aufgabe 4: const Memberfunktion
 	std::string toStringPol() const;	// Aufgabe 4: const Memberfunktion
 	std::string toStringKarPol() const;	// Aufgabe 4: const Memberfunktion
+	std::string toStringMult() const;	// Aufgabe 4: const Memberfunktion
 
 private:
 	// Variablen deklarieren
-	double m_x;
-	double m_y;
+	double m_x;					// re
+	double m_y;					// im
 	double m_radius;
 	double m_phi;
 	double m_r;

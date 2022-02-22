@@ -51,7 +51,23 @@ void Ui::anwendung() {
      z.~Complex();   // CountComplex = 0
      std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
      */
+
+
+
+    // Multiplikation zweier komplexer Zahlen
+    // z11 = z9 * z10
+    // z11 = 5.2 + 3.5i * 4.1 + 1.8i
+    // z11 = [z9(x)*z10(x) - z9(y)*z10(y)] + i * [z9(y)*z10(x) + z10(y)*z9(x)]
+    // z11 =          [5.2*4.1 - 3.5*1.8]  + i *          [3.5*4.1 + 1.8*5.2]
+    // z11 =             [15.02]           + i *              [23.71]
+    // z11 = 15.02 + i23.71
+    Complex z9(5.2, 3.5);       // z9(x) = m_x = 5.2 ; z10(x) = c.getReal = 4.1
+    Complex z10(4.1, 1.8);      // z9(y) = m_y = 3.5 ; z10(y) = c.getImag = 1.8
+    Complex z11 = z9*=z10;
+    std::cout << z11.toStringMult() << endl;
     
+
+/*
 
 // User-Eingabe
 
@@ -171,6 +187,7 @@ void Ui::anwendung() {
         }
     } while (neueBerechnung == "j");
 
+    */
     
 
 /* ----------------------------------------------------------------------------- */

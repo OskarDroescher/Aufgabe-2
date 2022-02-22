@@ -45,8 +45,23 @@ void Complex::setPhiCoord(double a) {
     updateCoordsKar();
 }
 
+//Muiltiplikationsoperator als Memberfunktion
+Complex Complex::operator*=(Complex c) {
+    double x = m_x * c.getReal() - m_y * c.getImag();
+    double y = m_y * c.getReal() + c.getImag() * m_x;   // [z9(y)*z10(x) + z10(y)*z9(x)]
+    m_x = x;
+    m_y = y;
+    return *this;       // this pointer zeigt auf das Objekt selbst
+}
 
-//Private Helperfunktionen -> Werte updaten
+
+std::ostream& operator<<(std::ostream& os, Complex c) {
+    os << c.getReal() << "+I*(" << c.getImag() << ")";
+    return os;
+}
+
+
+// Private Helperfunktionen -> Werte updaten
 void Complex::updateCoordsKar() {
     m_x = m_radius * cos(m_phi * M_PI / 180);
     m_y = m_radius * sin(m_phi * M_PI / 180);
@@ -79,5 +94,11 @@ std::string Complex::toStringKarPol() const {
     std::stringstream ausgabe;
     ausgabe << "Kartesisch: z = " << m_x << " + i" << m_y << "\n"
         "Polar: z = " << m_radius << "(cos " << m_phi << " + i sin " << m_phi << ")";
+    return ausgabe.str();
+}
+
+std::string Complex::toStringMult() const {
+    std::stringstream ausgabe;
+    ausgabe << "Produkt: z = " << m_x << " + i" << m_y;
     return ausgabe.str();
 }
