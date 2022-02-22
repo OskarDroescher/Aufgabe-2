@@ -37,8 +37,10 @@ void Ui::anwendung() {
 
      Complex z6(1.0, -2.0);
      Complex z7(z6);
-     std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;   // CountComplex = 3, obwohl zwei neue komplexe Zahlen (z6, z7) dazu gekommen sind.
-     // Instanzen werden somit nicht korrekt gezählt
+     std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;   // CountComplex = 3, obwohl zwei neue komplexe Zahlen Instanzen (z6, z7) dazu gekommen sind.
+     // Aufgabe 5b)
+     // Instanzen werden somit nicht korrekt gezählt. Hier müsste man einen Kopierkonstruktor definieren,
+     // Aufgabe war es jedoch nur, zu bestimmen, ob die Instanzen korrekt hochgezählt werden (=> Nein!).
 
      z.~Complex();   // CountComplex = 2
      std::cout << "Die Aktuelle Anzahl der Instanzen von der Klasse 'Complex' ist: " + to_string(z.CountComplex) << endl;
